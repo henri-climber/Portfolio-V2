@@ -1,0 +1,99 @@
+@import '../../variables.scss';
+
+/*.box{
+
+    .vertical-line{
+        width: 2px;
+        height: 100%;
+        background-color: $secondary-color;
+        position: fixed;
+        right: 64px;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+}*/
+
+.navbar{
+    position: fixed;
+    top:50%; 
+    right:64px;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  
+  .navbar ul{
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .navbar ul li{
+    width: 300px;
+    position: relative;
+    text-align: right;
+  }
+  
+  .navbar ul li .dot{
+    color: $text-color;
+    display: block;
+    padding:64px 0;
+    align-items: center;
+  }
+  
+  .navbar ul li .dot.active span {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .navbar ul li .dot span{
+    display: inline-block;
+    padding: 0px 0px;
+    margin-right: 32px;
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  
+  .navbar ul li:hover .dot span{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  
+  .navbar ul li .dot span::before{
+    content: '';
+    position: absolute;
+    transform: translate(7px, -50%);
+    display: block;
+
+  }
+  
+  .navbar ul li .dot::before,
+  .navbar ul li .dot::after{
+    content: '';
+    position: absolute;
+    top:50%;
+    border-radius: 50%;
+    display: block;
+    transition: .2s ease-out;
+  }
+  
+  .navbar ul li .dot::before{
+    height:12px;
+    width: 12px;
+    background-color: $secondary-color;
+    right:0;
+    transform: translateY(-50%);
+  }
+  
+  .navbar ul li .dot.active::before,
+  .navbar ul li:hover .dot::before{
+    width: 32px;
+    height: 32px;
+    border-color: $secondary-color;
+    background: $secondary-color;
+  }
+  
+

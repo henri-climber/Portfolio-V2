@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'animate.css';
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./assets/fonts/Noto_Sans/NotoSans-Regular.ttf") format("ttf");
+}
+
+.app-container{
+  width: 100%;
+}
+
+input,
+textarea {
+font-family: 'Noto Sans';
+}
+
+

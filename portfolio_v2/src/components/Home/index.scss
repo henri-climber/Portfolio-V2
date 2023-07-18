@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+
+.home-page {
+  animation: fadeIn 1s;
+  .home{
+    padding-top: 200px;
+    margin-left: 160px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+
+  }
+  .button {
+    margin-top: 64px;
+    background: $gradient-1;
+    color: $text-color;
+    border: none;
+    padding: 24px 48px;
+    border-radius: 92px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+  }
+  .button-icon {
+    margin-left: 16px;
+    margin-top: 8px;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .button:hover{
+    background: linear-gradient(to right, rgba($primary-color,0.8), rgba($secondary-color, 0.8));
+  }
+
+  .button:focus {
+    outline: none;
+  }
+  
+  .span {
+    color: $primary-color;
+}
+
+.t1{
+  color: $secondary-color;
+}
+
+}
+
+
+
+  

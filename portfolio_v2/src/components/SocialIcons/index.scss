@@ -1,0 +1,37 @@
+@import '../../variables.scss';
+
+.social-box{
+    position: absolute;
+    top: 8px;
+    left: 64px;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    li{
+        display: block;
+        
+        a{
+            margin-right: 32px;
+            font-size: 48px;
+            line-height: 16px;
+            svg{
+                color: $secondary-color;
+            }
+           
+            &:hover svg{
+                color: $primary-color;
+            }
+        }
+        img{
+            width: 56px;
+            border-radius: 50%;
+            margin-right: 32px;
+        }
+    }
+}

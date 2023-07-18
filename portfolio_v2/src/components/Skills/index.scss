@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+.skills-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 326px;
+  width: 100vw;
+.skills-table{
+  display: flex;
+  padding-top: 96px;
+  .column {
+    margin: 0 24px;
+    text-align: center;
+    padding-right: 144px;
+
+    ul {
+      list-style-type: none;
+      padding: 16px;
+      display: block;
+      flex-direction: column;
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+
+        .logo-wrapper {
+          display: flex;
+          align-items: center;
+          margin-right: 16px;
+
+          img {
+            margin-right: 8px;
+          }
+        }
+        span {
+          font-size: 26px;
+        }
+    }}
+  }
+}
+
+}
