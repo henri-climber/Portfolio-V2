@@ -28,9 +28,9 @@ const Projects = () => {
                     <div className="textBox">
                         <h5>Nitrate concentration in soil in Kenia</h5>
                         <p className="underline">Research project at Justus-Liebig Universität</p>
-                        <p className="projectDescription">I designed state-of-the-art LSTM neural networks, by utilizing four years of meticulously collected time series data from Kenia, including 40 diverse weather features,to predict key measurements that are traditionally difficult and costly to obtain.</p>
+                        <p className="projectDescription">I designed state-of-the-art LSTM neural networks, by utilizing four years of meticulously collected time series data from Kenia, including 40 diverse weather features, to predict key measurements that are traditionally difficult and costly to obtain.</p>
                         <div className="button-wrapper">
-                        <WebsiteButton websiteUrl="https://github.com/henri-climber" icon={githubIcon} />
+                        <WebsiteButton websiteUrl="https://github.com/henri-climber/LSTM-time-series-prediction-Kenya" icon={githubIcon} />
                         </div>
                         <h6>Technologies used:</h6>
                         <p>Python, Tensorflow, scikit-learn, Pandas</p>

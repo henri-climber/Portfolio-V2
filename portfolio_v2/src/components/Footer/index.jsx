@@ -8,6 +8,11 @@ import {
 
   
 const Footer = () => {
+
+    const handleImpressumClick = () => {
+        window.location.href = '/impressum';
+      };
+
     return (
         <div className="footer">
             
@@ -17,7 +22,7 @@ const Footer = () => {
                 <p>(c) Copyright Henri Breuer 2023</p>
 
                 <div className="privacy-policy">
-                    <p>Impressum</p>
+                <button onClick={handleImpressumClick}>Impressum</button>
 
                 </div>
 

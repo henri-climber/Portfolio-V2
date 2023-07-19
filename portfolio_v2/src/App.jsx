@@ -8,18 +8,19 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
+
 function App() {
   return (
-    <div className="app-container">
-      <Navbar />
-      <SocialIcons />
-      <Home />
-      <Skills />
-      <Projects/>
-      <AboutMe/>
-      <Contact/>
-      <Footer/>
-    </div>
+      <div className="app-container">
+        <Navbar />
+        <SocialIcons />
+        <Home />
+        <Skills />
+        <Projects/>
+        <AboutMe/>
+        <Contact/>
+        <Footer/>
+      </div>
   );
 }
 
