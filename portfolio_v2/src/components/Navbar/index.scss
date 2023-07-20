@@ -35,6 +35,7 @@
     width: 300px;
     position: relative;
     text-align: right;
+    cursor: pointer;
   }
   
   .navbar ul li .dot{
@@ -44,11 +45,13 @@
     align-items: center;
   }
   
+  // show text when active
   .navbar ul li .dot.active span {
     transform: translateX(0);
     opacity: 1;
   }
 
+  // hide text when not active or hovered
   .navbar ul li .dot span{
     display: inline-block;
     padding: 0px 0px;
@@ -57,6 +60,7 @@
     opacity: 0;
   }
   
+  // show text when hovered
   .navbar ul li:hover .dot span{
     transform: translateX(0px);
     opacity: 1;
@@ -67,7 +71,6 @@
     position: absolute;
     transform: translate(7px, -50%);
     display: block;
-
   }
   
   .navbar ul li .dot::before,
@@ -88,6 +91,7 @@
     transform: translateY(-50%);
   }
   
+  // make dot bigger when hovered or active
   .navbar ul li .dot.active::before,
   .navbar ul li:hover .dot::before{
     width: 32px;

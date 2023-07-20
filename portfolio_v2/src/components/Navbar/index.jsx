@@ -4,9 +4,9 @@ import { Link, Events, scrollSpy } from 'react-scroll';
 
 
 const Navbar = () => {
-  const [activeNavItem, setActiveNavItem] = useState('home');
-
-
+  const [activeNavItem, setActiveNavItem] = useState('null');
+  const [animateNavItem, setAnimateNavItem] = useState('null');
+  const [animationCount, setAnimationCount] = useState(0);
 
 
   const handleNavItemClick = (id) => {
@@ -14,6 +14,54 @@ const Navbar = () => {
     console.log(activeNavItem);
   };
   
+
+  // animate the navbar
+  useEffect(() => {
+    // Start the animation after 3 seconds
+    const timer = setTimeout(() => {
+      setAnimateNavItem('home');
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (animateNavItem === 'home') {
+        if (animationCount === 1) {
+          // break out of the animation
+          setAnimateNavItem('null');
+          return;
+        }
+        setAnimateNavItem('skills');
+      } else if (animateNavItem === 'skills') {
+        if (animationCount === 1) {
+          setAnimateNavItem('home');
+        }else{
+          setAnimateNavItem('projects');
+        }
+      } else if (animateNavItem === 'projects') {
+        if (animationCount === 1) {
+          setAnimateNavItem('skills');
+        }else{
+          setAnimateNavItem('aboutme');
+        }
+      } else if (animateNavItem === 'aboutme') {
+        console.log(animationCount)
+        if (animationCount === 1) {
+          setAnimateNavItem('projects');
+        }else{
+          setAnimateNavItem('contact');
+        }
+        
+      } else if (animateNavItem === 'contact') {
+        setAnimationCount(1);
+        console.log(animationCount)
+        setAnimateNavItem('aboutme');
+      }
+    }, 120);
+    return () => clearInterval(interval);
+  }, [animateNavItem]);
 
   return (
     <div className="box">
@@ -27,20 +75,20 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className='dot'
+              className={`dot ${animateNavItem === 'home' ? 'active' : ''}`}
               onClick={() => handleNavItemClick('home')}
             >
               <span>Home</span>
             </Link>
           </li>
-          <li>
+          <li >
             <Link
               to="skills"
               offset={-150}
               spy={true}
               smooth={true}
               duration={500}
-              className='dot'
+              className={`dot ${animateNavItem === 'skills' ? 'active' : ''}`}
               onClick={() => handleNavItemClick('skills')}
             >
               <span>Skills</span>
@@ -53,7 +101,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className='dot'
+              className={`dot ${animateNavItem === 'projects' ? 'active' : ''}`}
               onClick={() => handleNavItemClick('projects')}
             >
               <span>Projects</span>
@@ -66,7 +114,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className='dot'
+              className={`dot ${animateNavItem === 'aboutme' ? 'active' : ''}`}
               onClick={() => handleNavItemClick('aboutme')}
             >
               <span>About me</span>
@@ -75,11 +123,11 @@ const Navbar = () => {
           <li>
             <Link
               to="contact"
-              offset={-200}
+              offset={-150}
               spy={true}
               smooth={true}
               duration={500}
-              className='dot'
+              className={`dot ${animateNavItem === 'contact' ? 'active' : ''}`}
               onClick={() => handleNavItemClick('contact')}
             >
               <span>Contact</span>

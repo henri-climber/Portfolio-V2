@@ -8,7 +8,7 @@ import { Link} from 'react-scroll';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = ["S", "o", "f", "t", "w", "a", "r", "e"," ", "E", "n", "g", "i", "n", "e", "e", "r"]
+  const nameArray = ["S", "o", "f", "t", "w", "a", "r", "e"," ", "D", "e", "v", "e", "l", "o", "p", "e", "r"]
   useEffect(() => {
       setTimeout(() => {
        return setLetterClass('text-animate-hover')

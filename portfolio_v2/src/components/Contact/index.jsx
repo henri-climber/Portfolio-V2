@@ -30,7 +30,7 @@ const Contact = () => {
 
         <div className="row">
             <div className="contact-text">
-                <p>You are looking to hire a highly motivated software engineer intern or know a place where I would be a great fit? You have a project in mind or simply want to say hi? Don’t hestitate to contact me, I am looking forward to connecting with you!</p>
+                <p>You are looking to hire a highly motivated software developer intern or know a place where I would be a great fit? You have a project in mind or simply want to say hi? Don’t hestitate to contact me, I am looking forward to connecting with you!</p>
 
                 <div className="contact-links">
                     <MdMail size={48} color="#1CB2E6"/>
