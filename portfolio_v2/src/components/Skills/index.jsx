@@ -15,7 +15,7 @@ import tensorflowLogo from '../../assets/skills/tensorflow.png';
 export const Skills = () => {
   return (
     <div className="skills-page" id="skills">
-      <h2>Skills</h2>
+      <h3>Skills</h3>
       <div className="skills-table">
         <div className="column">
           <h5>Languages</h5>

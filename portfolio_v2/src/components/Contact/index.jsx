@@ -26,7 +26,7 @@ const Contact = () => {
 
     return (
     <div className="contact-page" id='contact'>
-        <h2>Contact</h2>
+        <h3>Contact</h3>
 
         <div className="row">
             <div className="contact-text">
