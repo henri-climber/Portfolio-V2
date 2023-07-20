@@ -9,13 +9,15 @@
     align-items: start;
     flex-direction: column;
 
-      p{
-        font-size: 25px;
+    .welcome-here-i-m-wrapper{
+      h3{
+        font-weight: lighter;
       }
+    }
 
   }
   .button {
-    margin-top: 64px;
+    margin-top: 24px;
     background: $gradient-1;
     color: $text-color;
     border: none;
@@ -24,13 +26,13 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 21px;
   }
   .button-icon {
     margin-left: 16px;
     margin-top: 8px;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
   }
   
   .button:hover{

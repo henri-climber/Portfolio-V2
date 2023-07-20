@@ -13,7 +13,7 @@ const AboutMe = () => {
       
     return (
         <div className="about-me-page" id="aboutme">
-            <h2>About me</h2>
+            <h3>About me</h3>
             <div className="about-me">
                 <p>My name is Henri, I am from Germany and I love tech. About 3,5 years ago I started my coding journey which led me fom simple 2D games to data science projects and finally my own little start up a year ago. I spent most of the time working with Flutter, Firebase and Python and I generally love the challenge of learning new technologies. I was also able to graduate from high school this spring with a 1.0 average.</p>
                 <img className="img1" src={henriImg} alt="Henri" />
