@@ -6,11 +6,19 @@
   align-items: center;
   padding-top: 256px;
   padding-bottom: 256px;
+  justify-content: center;
 
   .row {
     display: flex;
-    flex-direction: row;
+    align-items: start;
     margin-top: 48px;
+
+    @media screen and (max-width: 1420px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    flex-direction: row;
   }
 
   .contact-text {
@@ -18,8 +26,16 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    width: 560px;
+    width: 460px;
+
+    @media screen and (max-width: 1420px) {
+      padding-right: 60px;
+      padding-bottom: 64px;
+      width: 600px;
+    }
+      
     padding-right: 120px;
+   
 
     .contact-links {
       display: flex;
@@ -54,7 +70,7 @@
   
         input{
             display: flex;
-            width: 345px;
+            width: 280px;
             padding: 8px 16px;
             align-items: flex-start;
             gap: 10px;
@@ -69,7 +85,7 @@
 
         textarea{
             display: flex;
-            width: 592px;
+            width: 480px;
             height: 204px;
             padding: 8px 16px;
             align-items: flex-start;
@@ -82,6 +98,10 @@
             font-weight: 400;
             font-size: 21px;
             
+    @media screen and (max-width: 1420px) {
+
+      width: 600px;
+    }
 
         }
 

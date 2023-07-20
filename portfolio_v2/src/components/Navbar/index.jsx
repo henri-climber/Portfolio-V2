@@ -123,7 +123,7 @@ const Navbar = () => {
           <li>
             <Link
               to="contact"
-              offset={-150}
+              offset={-145}
               spy={true}
               smooth={true}
               duration={500}

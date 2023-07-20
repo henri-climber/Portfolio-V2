@@ -17,9 +17,15 @@
 .navbar{
     position: fixed;
     top:50%; 
-    right:48px;
     transform: translateY(-50%);
     z-index: 1000;
+
+    @media screen and (min-width: 1450px) {
+      right: 48px;
+    }
+    @media screen and (max-width: 1450px) {
+      right: 24px;
+    }
   }
   
   .navbar ul{
@@ -32,7 +38,12 @@
   }
   
   .navbar ul li{
-    width: 300px;
+    @media screen and (min-width: 1450px) {
+      width: 300px;
+    }
+    @media screen and (max-width: 1450px) {
+      width: 120px;
+    }
     position: relative;
     text-align: right;
     cursor: pointer;
@@ -41,8 +52,15 @@
   .navbar ul li .dot{
     color: $text-color;
     display: block;
-    padding: 32px 0;
     align-items: center;
+
+    @media screen and (min-width: 1450px) {
+      padding: 32px 0;
+    }
+    @media screen and (max-width: 1450px) {
+      padding: 20px 0;
+    }
+
   }
   
   // show text when active

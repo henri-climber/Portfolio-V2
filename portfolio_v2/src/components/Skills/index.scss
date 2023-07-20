@@ -9,36 +9,68 @@
   width: 100vw;
 .skills-table{
   display: flex;
+  flex-direction: row;
   padding-top: 96px;
-  .column {
-    margin: 0 24px;
-    text-align: center;
-    padding-right: 144px;
+  justify-content: center;
 
-    ul {
-      list-style-type: none;
-      padding: 16px;
-      display: block;
+  .outer-column{
+    display: flex;
+
+    @media screen and (max-width: 1450px) {
       flex-direction: column;
-      li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 24px;
+      align-items: start;
+      justify-content: space-between;
+      flex: 1;
 
-        .logo-wrapper {
+      padding-left: 80px;
+
+
+    }
+      flex-direction: row;
+
+    .column {
+      margin: 0 24px;
+      text-align: center;
+  
+      &:nth-child(-n + 3) {
+  
+      @media screen and (min-width: 1800px) {
+        padding-right: 144px;
+      }
+      @media screen and (max-width: 1800px) {
+        padding-right: 64px;
+      }
+      }
+  
+      ul {
+        list-style-type: none;
+        padding: 16px;
+        display: block;
+        flex-direction: column;
+        li {
           display: flex;
           align-items: center;
-          margin-right: 16px;
-
-          img {
-            margin-right: 8px;
+          margin-bottom: 24px;
+  
+          .logo-wrapper {
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+  
+            img {
+              margin-right: 8px;
+            }
           }
-        }
-        span {
-          font-size: 21px;
-        }
-    }}
+          span {
+            font-size: 21px;
+            white-space: nowrap;
+          }
+      }}
+    }
   }
-}
 
 }
+}
+
+
+

@@ -15,16 +15,28 @@
     .box{
       border-radius: 32px;
       background:  radial-gradient(circle, rgba($secondary-color, 0.2), rgba($primary-color, 0.2), rgba($secondary-color, 0.2), rgba($primary-color, 0.2));
-      background-size: 400% 400%;
-      flex-direction: row;
+      background-size: 300% 300%;
       display: flex;
       align-items: center;
       animation: gradient 15s ease infinite;
       margin-bottom: 96px;
 
+      @media screen and (max-width: 1750px) {
+        flex-direction: column;
+
+        .textBox{
+          order: 1;
+        }
+        .imgBox{
+          order: 2;
+        }
+
+      }
+      flex-direction: row;
+
 
       .imgBox{
-        padding: 80px 48px;
+        padding: 80px 24px;
 
 
         .nitrateImg{

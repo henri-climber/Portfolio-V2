@@ -4,7 +4,14 @@
   animation: fadeIn 1s;
   .home{
     padding-top: 200px;
-    margin-left: 160px;
+
+    @media screen and (min-width: 1600px) {
+      padding-left: 160px;
+    }
+    @media screen and (max-width: 1600px) {
+      padding-left: 64px;
+    }
+ 
     display: flex;
     align-items: start;
     flex-direction: column;
