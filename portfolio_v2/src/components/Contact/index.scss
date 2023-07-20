@@ -106,6 +106,18 @@
           border: none;
         }
       }
+
+      .error{
+        color: $error-color;
+      }
+
+      .invalid{
+        color: $error-color;
+      }
+
+      .success{
+        color: rgb(14, 177, 14);
+      }
     }
   }
   
