@@ -49,8 +49,7 @@ const Home = () => {
       <FontAwesomeIcon icon={faArrowDown} className="button-icon" />
     </Link>
     </div>
-
-    </div>
+</div>
   );
 };
 
