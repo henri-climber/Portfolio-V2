@@ -20,7 +20,7 @@ const Projects = () => {
                     </div>
                     <div className="textBox">
                         <h5>EasyComp</h5>
-                        <p className="projectDescription">Together with a friend I founded a <b>startup</b> to facilitate the organization of climbing competitions in Germany (which is why the language is german as well). I developed a <b>fullstack website</b> that is responsible for the registration and automatic results calculation  for some of the biggest climbing competitions in Germany. Since the website is online for commercial use i can not share source code.</p>
+                        <p className="projectDescription">Together with a friend I founded a startup to facilitate the organization of climbing competitions in Germany (which is why the language is German as well). I developed a fullstack website that is responsible for the registration and automatic results calculation  for some of the biggest climbing competitions in Germany. Since the website is online for commercial use I can not share source code.</p>
                         <WebsiteButton websiteUrl="https://easy-comp.net" icon={globeIcon} />
                         <h6>Technologies used:</h6>
                         <p>Flutter, Firebase, TypeScript</p>
@@ -29,7 +29,7 @@ const Projects = () => {
 
                 <div class="box">
                     <div className="textBox">
-                        <h5>Nitrate concentration in soil in Kenia</h5>
+                        <h5>Nitrate concentrations in river systems of Kenya</h5>
                         <p className="underline">Research project at Justus-Liebig Universität</p>
                         <p className="projectDescription">I designed state-of-the-art LSTM neural networks, by utilizing four years of meticulously collected time series data from Kenia, including 40 diverse weather features, to predict key measurements that are traditionally difficult and costly to obtain.</p>
                         <div className="button-wrapper">
