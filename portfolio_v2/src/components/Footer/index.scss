@@ -20,6 +20,11 @@
         flex-direction: row;
         justify-content: space-between;
 
+        @media screen and (max-width: 530px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         p{
             font-size: 18px;
             color: $text-color;
@@ -31,12 +36,12 @@
             p{
                 font-size: 18px;
                 color: $text-color;
-                margin-right: 16px;
+                padding-right: 16px;
             }
             button{
                 font-size: 18px;
                 color: $text-color;
-                margin-right: 16px;
+                padding-right: 16px;
                 background: none;
 
             }

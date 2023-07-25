@@ -2,6 +2,9 @@
 
 .home-page {
   animation: fadeIn 1s;
+  @media screen and (max-width: 400px) {
+    max-width: 350px;
+  }
   .home{
     padding-top: 200px;
 
@@ -10,18 +13,60 @@
     }
     @media screen and (max-width: 1600px) {
       padding-left: 64px;
+      padding-right: 16px;
     }
- 
+    @media screen and (max-width: 700px) {
+      padding-left: 24px;
+      padding-right: 16px;
+    }
+
+    .animated-letters{
+      display: none;
+      @media screen and (min-width: 600px){
+        display: flex;        
+      }
+    }
+    .animated-letters2{
+      display: none;
+      padding-top: 8px;
+      @media screen and (max-width: 600px){
+        display: flex;  
+        flex-direction: column;
+        line-height: 45px;      
+      }
+    }
+
     display: flex;
     align-items: start;
     flex-direction: column;
 
     .welcome-here-i-m-wrapper{
+
       h3{
         font-weight: lighter;
+        word-wrap: break-word;
+
+        @media screen and (min-width: 768px) {
+          font-size: 60px;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 30px;
+        }
+      }
+
+      .text-wrapper{
+       word-wrap: break-word;
+
       }
     }
 
+    p{
+      @media screen and (max-width: 500px) {
+        font-size: 16px;
+        word-wrap: break-word;
+        max-width: 300px;
+      }
+    }
   }
   .button {
     margin-top: 24px;
@@ -34,12 +79,21 @@
     display: flex;
     align-items: center;
     font-size: 21px;
+
+    @media screen and (max-width: 500px) {
+      font-size: 18px;
+      padding: 16px 32px;
+    }
   }
   .button-icon {
-    margin-left: 16px;
+    padding-left: 16px;
     margin-top: 8px;
     width: 24px;
     height: 24px;
+    @media screen and (max-width: 500px) {
+      width: 16px;
+      height: 16px;
+    }
   }
   
   .button:hover{

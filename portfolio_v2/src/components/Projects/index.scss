@@ -8,10 +8,23 @@
   flex-direction: column;
   padding-top: 256px;
   width: 100vw;
+  
+  @media screen and (max-width: 450px) {
+    padding-top: 128px;
+}
 
 
   .projects{
     padding-top: 96px;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    @media screen and (max-width: 500px) {
+      padding-top: 96px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
     .box{
       border-radius: 32px;
       background:  radial-gradient(circle, rgba($secondary-color, 0.2), rgba($primary-color, 0.2), rgba($secondary-color, 0.2), rgba($primary-color, 0.2));
@@ -38,14 +51,48 @@
       .imgBox{
         padding: 80px 24px;
 
+        @media screen and (max-width:550px){
+          padding: 24px 16px;
+        }
 
-        .nitrateImg{
+        .nitrateImg {
           width: 550px;
+          @media screen and (max-width:1000px){
+            width: 430px;
+          }
+          @media screen and (max-width:550px){
+            width: 360px;
+          }
+          @media screen and (max-width:450px){
+            width: 300px;
+          }
 
         }
 
-        .nuclide-box{
+        .nuclide-box {
           width: 550px;
+          @media screen and (max-width: 1000px) {
+            width: 430px;
+          }
+          @media screen and (max-width: 550px) {
+            width: 360px;
+          }
+          @media screen and (max-width:450px){
+            width: 300px;
+          }
+        }
+
+
+        .easycomp-img{
+          @media screen and (max-width:1000px){
+            width: 430px;
+          }
+          @media screen and (max-width:550px){
+            width: 360px;
+          }
+          @media screen and (max-width:450px){
+            width: 300px;
+          }
         }
       }
 
@@ -59,12 +106,14 @@
         }
 
         .underline{
-          line-height: 0;
+          line-height: o;
           margin-top: 8px;
           font-size: 18px;
+          word-wrap: break-word;
+
         }
         .projectDescription{
-          width: 480px;
+          
           word-wrap: break-word;
           overflow-wrap: break-word;
         }

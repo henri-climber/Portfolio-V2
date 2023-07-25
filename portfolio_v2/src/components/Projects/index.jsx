@@ -16,7 +16,7 @@ const Projects = () => {
             <div className="projects">
                 <div class="box">
                     <div className="imgBox">
-                        <img src={easyCompImg} alt="EasyComp" />
+                        <img className="easycomp-img" src={easyCompImg} alt="EasyComp" />
                     </div>
                     <div className="textBox">
                         <h5>EasyComp</h5>

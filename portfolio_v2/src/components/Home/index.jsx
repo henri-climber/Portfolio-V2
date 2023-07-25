@@ -9,6 +9,8 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   const nameArray = ["S", "o", "f", "t", "w", "a", "r", "e"," ", "D", "e", "v", "e", "l", "o", "p", "e", "r"]
+  const nameArray2 = ["S", "o", "f", "t", "w", "a", "r", "e"]
+  const nameArray3 = ["D", "e", "v", "e", "l", "o", "p", "e", "r"]
   useEffect(() => {
       setTimeout(() => {
        return setLetterClass('text-animate-hover')
@@ -26,11 +28,26 @@ const Home = () => {
           <span className="span">Henri</span>
         </h3>
       </div>
-          <AnimatedLetters className="animated-letters"
+        <div className="animated-letters">
+        <AnimatedLetters 
               letterClass={letterClass}
               strArray={nameArray}
               idx={5}
             />
+        </div>
+
+        <div className="animated-letters2">
+        <AnimatedLetters 
+              letterClass={letterClass}
+              strArray={nameArray2}
+              idx={5}
+            />
+          <AnimatedLetters
+              letterClass={letterClass}
+              strArray={nameArray3}
+              idx={5}
+            />
+        </div>
 
       <p>
         I'm a self-taught software developer from Germany who recently graduated
