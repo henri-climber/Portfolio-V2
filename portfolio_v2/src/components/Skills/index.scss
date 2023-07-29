@@ -2,12 +2,11 @@
 
 .skills-page {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-top: 326px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 32px;
+  padding-right: 32px;
 
   
   @media screen and (max-width: 450px) {
@@ -18,7 +17,7 @@
   flex-direction: row;
   padding-top: 96px;
   justify-content: center;
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 640px) {
     flex-direction: column;
     
   }
@@ -32,18 +31,11 @@
       justify-content: space-between;
       flex: 1;
 
-      padding-left: 80px;
-      @media screen and (max-width: 720px) {
-        padding-left: 16px;
-
-      }
-
-
     }
       flex-direction: row;
 
     .column {
-      margin: 0 24px;
+      padding: 0 24px;
       text-align: center;
   
       &:nth-child(-n + 3) {
@@ -51,11 +43,8 @@
       @media screen and (min-width: 1800px) {
         padding-right: 144px;
       }
-      @media screen and (max-width: 1800px) {
+      @media screen and (max-width: 1800px) and (min-width: 1450px){
         padding-right: 64px;
-      }
-      @media screen and (max-width: 720px) {
-        padding-right: 32px;
       }
       }
   
@@ -72,10 +61,10 @@
           .logo-wrapper {
             display: flex;
             align-items: center;
-            margin-right: 16px;
+            padding-right: 16px;
   
             img {
-              margin-right: 8px;
+              padding-right: 8px;
             }
           }
           span {

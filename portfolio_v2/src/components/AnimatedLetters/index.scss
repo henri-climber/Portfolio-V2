@@ -8,10 +8,10 @@
   padding-bottom: 4px;
 
   h2{
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 850px) {
       font-size: 84px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 850px) {
       font-size: 60px;
     }
   }
