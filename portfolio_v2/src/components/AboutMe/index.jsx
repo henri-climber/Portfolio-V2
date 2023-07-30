@@ -40,7 +40,7 @@ const AboutMe = () => {
         </div>
         <button className="btn" onClick={handleButtonClick}>
           Download resume
-          <FiDownload size={32} />
+          <FiDownload className="icon" size={32} />
         </button>
       </div>
     </div>

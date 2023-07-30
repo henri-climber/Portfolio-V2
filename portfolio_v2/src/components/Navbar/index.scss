@@ -1,14 +1,14 @@
 @import '../../variables.scss';
 
+.mobile-navbar{
+  display: none;
+}
+
 .navbar{
     position: fixed;
     top:50%; 
     transform: translateY(-50%);
     z-index: 1000;
-
-    @media screen  and (max-width: 500px){
-      display: none;
-    }
 
     @media screen and (min-width: 1450px) {
       right: 48px;
@@ -28,14 +28,9 @@
   }
   
   .navbar ul li{
-    @media screen and (min-width: 1450px) {
-      width: 300px;
-    }
-    @media screen and (max-width: 1450px) {
-      width: 120px;
-    }
+    width: 140px;
     position: relative;
-    text-align: right;
+    text-align: left;
     cursor: pointer;
   }
   
@@ -118,4 +113,196 @@
     background: $secondary-color;
   }
   
+// separate css for mobile
 
+@media screen  and (max-width: $navbar-breakpoint) {
+  .navbar{
+    display: none;
+  }
+  .m-nav{
+    z-index: 999;
+    .container {
+      max-width: 1050px;
+      width: 100%;
+      margin: auto;
+    }
+    
+    .mobile-navbar {
+      width: 100%;
+      display: flex;
+      position: fixed;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 62px;
+    }
+    
+    .mobile-navbar .menu-items {
+      display: flex;
+    }
+
+      // menu item styling
+      .menu-items ul{
+        list-style: none;
+        padding: 0; 
+        padding-right: 8px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .menu-items ul li{
+        width: 140px;
+        position: relative;
+        text-align: left;
+        cursor: pointer;
+      }
+      .menu-items ul li .dot{
+        color: $text-color;
+        display: block;
+        align-items: center;
+    
+        @media screen and (max-width: 1450px) {
+          padding: 16px 0;
+        }
+    
+      }
+
+  .menu-items ul li .dot span {
+    transform: translateX(0);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 2;
+    opacity: 1;
+  }
+  .menu-items ul li .dot span::before{
+    content: '';
+    position: absolute;
+    transform: translate(7px, -50%);
+    display: block;
+  }
+  
+  .menu-items ul li .dot::before,
+  .menu-items ul li .dot::after{
+    content: '';
+    position: absolute;
+    top:50%;
+    border-radius: 50%;
+    display: block;
+    transition: .2s ease-out;
+  }
+  
+  .menu-items ul li .dot::before{
+    height:8px;
+    width: 8px;
+    background-color: $secondary-color;
+    right:0;
+    transform: translateY(-50%);
+  }
+  
+  // make dot bigger when hovered or active
+  .menu-items ul li .dot.active::before,
+  .menu-items ul li:hover .dot::before{
+    width: 24px;
+    height: 24px;
+    border-color: $secondary-color;
+    background: $secondary-color;
+  }
+
+    .nav-container {
+      display: block;
+      position: relative;
+      z-index: 1;
+      height: 93.5px;
+      background-color: $navbar-color;
+    }
+    
+    .nav-container .checkbox {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 32px;
+      top: 32px;
+      right: 24px;
+      z-index: 99999;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    .nav-container .hamburger-lines {
+      display: block;
+      height: 32px;
+      width: 40px;
+      position: absolute;
+      top: 32px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 10000;
+    }
+    
+    .nav-container .hamburger-lines .line {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: $secondary-color;
+    }
+    
+    .nav-container .hamburger-lines .line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+    }
+    
+    .nav-container .hamburger-lines .line2 {
+      transition: transform 0.2s ease-in-out;
+    }
+    
+    .nav-container .hamburger-lines .line3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+    
+    .mobile-navbar .menu-items {
+      padding-top: 120px;
+      background: $navbar-color;
+      height: 100vh;
+      width: 180px;
+      right: 0px;
+      transform: translate(+150%);
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      transition: transform 0.7s ease-in-out;
+      opacity: 0;
+      z-index: 1000;
+    }
+    
+
+
+    
+    .nav-container input[type="checkbox"]:checked ~ .menu-items {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      transform: rotate(45deg);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      transform: scaleY(0);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      transform: rotate(-45deg);
+    }
+    
+  }
+
+}

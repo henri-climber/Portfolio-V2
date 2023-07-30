@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./index.scss";
-import { Link, Events, scrollSpy } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 
 const Navbar = () => {
@@ -8,9 +8,17 @@ const Navbar = () => {
   const [animateNavItem, setAnimateNavItem] = useState('null');
   const [animationCount, setAnimationCount] = useState(0);
 
+    // Create a ref for the checkbox input element
+    const checkboxRef = useRef(null);
 
   const handleNavItemClick = (id) => {
     setActiveNavItem(id);
+
+    // Uncheck the checkbox when a link is clicked
+    if (checkboxRef.current) {
+      checkboxRef.current.checked = false;
+    }
+
     console.log(activeNavItem);
   };
   
@@ -65,7 +73,7 @@ const Navbar = () => {
 
   return (
     <div className="box">
-      <div className='vertical-line'></div>
+
       <nav className="navbar">
         <ul>
           <li>
@@ -135,6 +143,89 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+
+      <nav className='m-nav'>
+      <div className="mobile-navbar">
+        <div className="container nav-container">
+            <input className="checkbox" type="checkbox" name="" id="" ref={checkboxRef}/>
+            <div className="hamburger-lines">
+              <span className="line line1"></span>
+              <span className="line line2"></span>
+              <span className="line line3"></span>
+            </div>  
+          <div className="menu-items">
+          <ul>
+          <li>
+            <Link
+              to="home"
+              offset={-150}
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`dot ${animateNavItem === 'home' ? 'active' : ''}`}
+              onClick={() => handleNavItemClick('home')}
+            >
+              <span>Home</span>
+            </Link>
+          </li>
+          <li >
+            <Link
+              to="skills"
+              offset={-150}
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`dot ${animateNavItem === 'skills' ? 'active' : ''}`}
+              onClick={() => handleNavItemClick('skills')}
+            >
+              <span>Skills</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="projects"
+              offset={-150}
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`dot ${animateNavItem === 'projects' ? 'active' : ''}`}
+              onClick={() => handleNavItemClick('projects')}
+            >
+              <span>Projects</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="aboutme"
+              offset={-150}
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`dot ${animateNavItem === 'aboutme' ? 'active' : ''}`}
+              onClick={() => handleNavItemClick('aboutme')}
+            >
+              <span>About me</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="contact"
+              offset={-145}
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`dot ${animateNavItem === 'contact' ? 'active' : ''}`}
+              onClick={() => handleNavItemClick('contact')}
+            >
+              <span>Contact</span>
+            </Link>
+          </li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
     </div>
   );
 };
