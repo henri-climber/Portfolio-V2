@@ -75,34 +75,34 @@ const Contact = () => {
                 <form ref={form} onSubmit={sendEmail}>
                     <div className="form-group">
                     <input
-                        placeholder='Name'
                         type="text"
                         id="name"
                         name='user_name'
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
+                    <label for="name">Name</label>
                     </div>
 
                     <div className="form-group">
                     <input
-                        placeholder='Email'
                         type="email"
                         id="email"
                         name='user_email'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
+                    <label for="email">E-Mail</label>
                     </div>
 
                     <div className="form-group">
                     <textarea
-                        placeholder='Message'
                         id="message"
                         name='message'
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                     />
+                    <label for="message">Message</label>
                     </div>
 
                     <div>

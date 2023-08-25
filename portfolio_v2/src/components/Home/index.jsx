@@ -50,10 +50,9 @@ const Home = () => {
         </div>
 
       <p>
-        I'm a self-taught software developer from Germany who recently graduated
-        from high school.
+      Highly motivated self-taught software developer from Germany.
         <br />
-        Currently, I'm actively seeking internships to gain real-world experience.
+        Currently, I'm actively seeking internships to channel my coding skills into real-world impact.
       </p>
       <Link className="button" 
             to='projects' 

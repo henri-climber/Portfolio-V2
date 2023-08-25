@@ -6,7 +6,7 @@ import { FiDownload } from 'react-icons/fi';
 
 const AboutMe = () => {
   const handleButtonClick = () => {
-    window.open("https://drive.google.com/file/d/1vH4-c4C-Y1GljJCXpETDaGLYDTWhn4E-/view?usp=sharing", '_blank');
+    window.open("https://drive.google.com/file/d/1663ZZ1WL9zDzPkoQHgO4xTXs9giQ1Ypa/view?usp=sharing", '_blank');
   };
 
   return (
@@ -19,12 +19,7 @@ const AboutMe = () => {
             <img className="img1" src={henriImg} alt="Henri" />
           </div>
           <p>
-            My name is Henri, I am from Germany and I love tech. About 3,5 years ago I
-            started my coding journey which led me fom simple 2D games to data science
-            projects and finally to my own little start up a year ago. I spent most of
-            the time working with Flutter, Firebase and Python and I generally love the
-            challenge of learning new technologies. I was also able to graduate from
-            high school this spring with a perfect grade average of 1.0.
+          Hey there, I'm Henri, a tech enthusiast from Germany. Over the past 3.5 years, I've gone from creating 2D games to tackling data science projects and launching my own startup. My expertise lies in Flutter, Firebase, and Python, and I love embracing new technologies. Recently, I graduated high school with a perfect grade average of 1.0. 
           </p>
           <img className="img11" src={henriImg} alt="Henri" />
         </div>

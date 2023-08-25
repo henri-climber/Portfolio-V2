@@ -1,9 +1,11 @@
 @import '../../variables.scss';
 
 .social-box{
-    position: absolute;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
     padding-top: 8px;
-    padding-left: 24px;
+    padding-right: 24px;
     z-index: 101;
     width: 100%;
     @media screen and (max-width: $navbar-breakpoint) {
@@ -11,6 +13,8 @@
         padding-left: 16px;
         background-color: $navbar-color;
         width: 75%;
+        display: flex;
+        justify-content: start;
     }
     @media screen and (max-width: 450px) {
         padding-left: 0px;
@@ -45,5 +49,8 @@ ul{
             border-radius: 50%;
             margin-right: 32px;
         }
+    }
+    @media screen and (min-width: $navbar-breakpoint) {
+        flex-direction: row-reverse;
     }
 }
