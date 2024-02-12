@@ -222,7 +222,7 @@ $cell-top-small: math.div($scene-height-small - $cell-height-small, 2);
 
   @keyframes rotate {
     from { transform: translateZ(-208px) rotateY(0deg); }
-    to { transform: translateZ(-208px) rotateY(1turn); }
+    to { transform: translateZ(-208px) rotateY(-1turn); }
   }
 
 

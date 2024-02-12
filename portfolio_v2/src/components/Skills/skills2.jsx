@@ -33,11 +33,16 @@ const Carousel = () => {
   };
 
 
+  const autoRotateTimeout = useRef(null); // Use useRef to persist the timeout ID
+
   const handleUserAction = () => {
     if (autoRotate) setAutoRotate(false);
   
+    // Clear the previous timeout if it exists
+    if (autoRotateTimeout.current) clearTimeout(autoRotateTimeout.current);
+  
     // Set autoRotate to true after 3 seconds
-    setTimeout(() => {
+    autoRotateTimeout.current = setTimeout(() => {
       setAutoRotate(true);
     }, 3000);
   };
@@ -221,9 +226,6 @@ const Carousel = () => {
               </ul>
             </div>
           </div>
-
-   
-
 
         </div>
         <button onClick={handleNext} className="carousel-button next-button">&gt;</button>
