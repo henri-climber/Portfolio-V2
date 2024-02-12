@@ -17,9 +17,14 @@
   }
 }
 
+.bounceIn{
+  animation: bounceIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
 .text-animate {
     display: inline-block;
-    opacity: 0;
     font-weight: bold;
     animation: bounceIn;
     animation-duration: 2s;
