@@ -16,6 +16,15 @@ body {
   text-align: center;
 }
 
+
+
+.carousel-button{
+  font-size: 20px;
+  color: red;
+  margin-bottom: 20px;
+
+}
+
 .scene {
   margin: 40px 0;
   position: relative;
@@ -25,6 +34,11 @@ body {
   perspective: 1000px;
 }
 
+.hint {
+  margin-top: -64px;
+  font-size: 16px;
+
+}
 
 .carousel {
   width: 100%;

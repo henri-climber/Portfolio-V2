@@ -18,19 +18,6 @@ const Carousel = () => {
     carouselRef.current.style.transform = `translateZ(${-radius}px) rotateY(${angle}deg)`;
   };
 
-  // auto rotation
-  const [autoRotate, setAutoRotate] = useState(null);
-
-  const startAutoRotate = () => {
-    setAutoRotate(setTimeout(() => {
-      setSelectedIndex((prevSelectedIndex) => prevSelectedIndex + 1);
-      startAutoRotate();
-    }, 3000)); // rotate every 3 seconds
-  };
-
-  const stopAutoRotate = () => {
-    clearTimeout(autoRotate);
-  };
 
   const handleUserAction = () => {
     stopAutoRotate();
@@ -107,14 +94,11 @@ const Carousel = () => {
     };
   }, []);
 
-  // Start auto-rotate when the component mounts
-  useEffect(() => {
-    startAutoRotate();
-    return stopAutoRotate; // clean up on unmount
-  }, []);
+
 
 // Render the carousel JSX
 return (
+  <div className="skills2">
     <div className="scene">
       <button onClick={handlePrevious} className="carousel-button previous-button">&lt;</button>
       
@@ -129,6 +113,13 @@ return (
       </div>
       <button onClick={handleNext} className="carousel-button next-button">&gt;</button>
     </div>
+    
+    <div className="hint">
+      Hint: Swipe/drag or click buttons to rotate
+    </div>
+
+  </div>
+   
   );
 };
 
