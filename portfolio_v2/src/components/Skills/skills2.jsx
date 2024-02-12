@@ -18,6 +18,25 @@ const Carousel = () => {
     carouselRef.current.style.transform = `translateZ(${-radius}px) rotateY(${angle}deg)`;
   };
 
+  // auto rotation
+  const [autoRotate, setAutoRotate] = useState(null);
+
+  const startAutoRotate = () => {
+    setAutoRotate(setTimeout(() => {
+      setSelectedIndex((prevSelectedIndex) => prevSelectedIndex + 1);
+      startAutoRotate();
+    }, 3000)); // rotate every 3 seconds
+  };
+
+  const stopAutoRotate = () => {
+    clearTimeout(autoRotate);
+  };
+
+  const handleUserAction = () => {
+    stopAutoRotate();
+    startAutoRotate();
+  };
+ 
   const updateCarousel = () => {
     theta = 360 / cellCount;
     const cellSize = calculateCellSize();
@@ -36,18 +55,71 @@ const Carousel = () => {
 
   const handlePrevious = () => {
     setSelectedIndex((prevSelectedIndex) => prevSelectedIndex - 1);
+    handleUserAction();
   };
 
   const handleNext = () => {
     setSelectedIndex((prevSelectedIndex) => prevSelectedIndex + 1);
+    handleUserAction();
   };
 
-  // Render the carousel JSX
+
+  // rotate carousel by swiping
+  let initialPos = 0;
+  let swipeStarted = false;
+
+  const handleSwipeStart = (e) => {
+    swipeStarted = true;
+    initialPos = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+    handleUserAction();
+  };
+
+  const handleSwipeMove = (e) => {
+    if (!swipeStarted) return;
+    const currentPos = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+    const diff = initialPos - currentPos;
+    if (Math.abs(diff) > 50) { // adjust threshold as needed
+      setSelectedIndex((prevSelectedIndex) => prevSelectedIndex + (diff > 0 ? 1 : -1));
+      swipeStarted = false;
+    }
+    handleUserAction();
+  };
+
+  const handleSwipeEnd = () => {
+    swipeStarted = false;
+  };
+
+  useEffect(() => {
+    const carouselElement = carouselRef.current;
+    carouselElement.addEventListener('touchstart', handleSwipeStart);
+    carouselElement.addEventListener('touchmove', handleSwipeMove);
+    carouselElement.addEventListener('touchend', handleSwipeEnd);
+    carouselElement.addEventListener('mousedown', handleSwipeStart);
+    carouselElement.addEventListener('mousemove', handleSwipeMove);
+    carouselElement.addEventListener('mouseup', handleSwipeEnd);
+    return () => {
+      carouselElement.removeEventListener('touchstart', handleSwipeStart);
+      carouselElement.removeEventListener('touchmove', handleSwipeMove);
+      carouselElement.removeEventListener('touchend', handleSwipeEnd);
+      carouselElement.removeEventListener('mousedown', handleSwipeStart);
+      carouselElement.removeEventListener('mousemove', handleSwipeMove);
+      carouselElement.removeEventListener('mouseup', handleSwipeEnd);
+    };
+  }, []);
+
+  // Start auto-rotate when the component mounts
+  useEffect(() => {
+    startAutoRotate();
+    return stopAutoRotate; // clean up on unmount
+  }, []);
+
 // Render the carousel JSX
 return (
     <div className="scene">
       <button onClick={handlePrevious} className="carousel-button previous-button">&lt;</button>
-      <div className="carousel" ref={carouselRef}>
+      
+
+ <div className="carousel" ref={carouselRef}>
         {/* Dynamically create cells */}
         {[...Array(cellCount)].map((_, i) => (
           <div className="carousel__cell" key={i}>
