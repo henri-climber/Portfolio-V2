@@ -6,10 +6,11 @@ import WebsiteButton from '../common_components/icon_button';
 import globeIcon from '../../assets/icons/globe-1.png';
 import githubIcon from '../../assets/skills/github-mark-white.png';
 import nuclideGIF from '../../assets/videos/nuclide_table_demo.gif';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 const Projects = () => {
 
-    
+
     return (
         <div className="projects-page" id="projects">
             <h3>Projects</h3>
@@ -21,7 +22,12 @@ const Projects = () => {
                     <div className="textBox">
                         <h5>EasyComp</h5>
                         <p className="projectDescription">Together with a friend I founded a startup to facilitate the organization of climbing competitions in Germany (which is why the language is German as well). I developed a fullstack website that is responsible for the registration and automatic results calculation  for some of the biggest climbing competitions in Germany. Since the website is online for commercial use I cannot share source code.</p>
-                        <WebsiteButton websiteUrl="https://easy-comp.net" icon={globeIcon} />
+                        <div className="row">
+                            <WebsiteButton websiteUrl="https://easy-comp.net" icon={globeIcon} />
+                            <a href="https://play.google.com/store/apps/details?id=net.easy_comp.easycomp" target="_blank" style={{ display: 'inline-block', padding: '0', margin: '0', lineHeight: '1' }}>
+                                <i className="fab fa-google-play"></i>
+                            </a>
+                        </div>
                         <h6>Technologies used:</h6>
                         <p>Flutter, Firebase, TypeScript</p>
                     </div>
@@ -33,7 +39,7 @@ const Projects = () => {
                         <p className="underline">Research project at Justus-Liebig Universität</p>
                         <p className="projectDescription">I designed state-of-the-art LSTM neural networks, by utilizing four years of meticulously collected time series data from Kenia, including 40 diverse weather features, to predict key measurements that are traditionally difficult and costly to obtain.</p>
                         <div className="button-wrapper">
-                        <WebsiteButton websiteUrl="https://github.com/henri-climber/LSTM-time-series-prediction-Kenya" icon={githubIcon} />
+                            <WebsiteButton websiteUrl="https://github.com/henri-climber/LSTM-time-series-prediction-Kenya" icon={githubIcon} />
                         </div>
                         <h6>Technologies used:</h6>
                         <p>Python, Tensorflow, scikit-learn, Pandas</p>

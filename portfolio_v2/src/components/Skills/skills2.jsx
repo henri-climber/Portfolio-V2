@@ -37,10 +37,10 @@ const Carousel = () => {
 
   const handleUserAction = () => {
     if (autoRotate) setAutoRotate(false);
-  
+
     // Clear the previous timeout if it exists
     if (autoRotateTimeout.current) clearTimeout(autoRotateTimeout.current);
-  
+
     // Set autoRotate to true after 3 seconds
     autoRotateTimeout.current = setTimeout(() => {
       setAutoRotate(true);
@@ -130,60 +130,60 @@ const Carousel = () => {
         <div className={`carousel ${autoRotate ? "rotate" : ""}`} ref={carouselRef}>
 
           <div className="carousel__cell" key={0}>
-          <div className="column">
-            <h6>Languages</h6>
-            <ul>
-              <li>
-                <div className="logo-wrapper">
-                  <img src={pythonLogo} alt="Python Logo" width="48" height="48" />
-                  <span>Python</span>
-                </div>
-              </li>
-              <li>
-                <div className="logo-wrapper">
-                  <img src={dartLogo} alt="Dart Logo" width="48" height="48" />
-                  <span>Dart</span>
-                </div>
-              </li>
-              <li>
-                <div className="logo-wrapper">
-                  <img src={javaLogo} alt="Java Logo" width="48" height="48" />
-                  <span>Java</span>
-                </div>
-              </li>
-            </ul>
-            
-          </div>
+            <div className="column">
+              <h6>Languages</h6>
+              <ul>
+                <li>
+                  <div className="logo-wrapper">
+                    <img src={pythonLogo} alt="Python Logo" width="48" height="48" />
+                    <span>Python</span>
+                  </div>
+                </li>
+                <li>
+                  <div className="logo-wrapper">
+                    <img src={dartLogo} alt="Dart Logo" width="48" height="48" />
+                    <span>Dart</span>
+                  </div>
+                </li>
+                <li>
+                  <div className="logo-wrapper">
+                    <img src={javaLogo} alt="Java Logo" width="48" height="48" />
+                    <span>Java</span>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
           </div>
 
           <div className="carousel__cell" key={1}>
-          <div className="column">
-            <h6>Frameworks</h6>
-            <ul>
-              <li>
-                <div className="logo-wrapper">
-                  <img src={flutterLogo} alt="Flutter Logo" height="48" />
-                  <span>Flutter</span>
-                </div>
-              </li>
-              <li>
-                <div className="logo-wrapper">
-                  <img src={tensorflowLogo} alt="Tensorflow Logo" height="48" />
-                  <span>Tensorflow</span>
-                </div>
-              </li>
-              <li>
-                <div className="logo-wrapper">
-                  <img src={scikitlearnLogo} alt="Scikit-learn Logo" height="48" />
-                  <span>scikit-learn</span>
-                </div>
-              </li>
-            </ul>
-          </div>
+            <div className="column">
+              <h6>Frameworks</h6>
+              <ul>
+                <li>
+                  <div className="logo-wrapper">
+                    <img src={flutterLogo} alt="Flutter Logo" height="48" />
+                    <span>Flutter</span>
+                  </div>
+                </li>
+                <li>
+                  <div className="logo-wrapper">
+                    <img src={tensorflowLogo} alt="Tensorflow Logo" height="48" />
+                    <span>Tensorflow</span>
+                  </div>
+                </li>
+                <li>
+                  <div className="logo-wrapper">
+                    <img src={scikitlearnLogo} alt="Scikit-learn Logo" height="48" />
+                    <span>scikit-learn</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="carousel__cell" key={2}>
-          <div className="column">
+            <div className="column">
               <h6>Backend</h6>
               <ul>
                 <li>
@@ -202,7 +202,7 @@ const Carousel = () => {
             </div>
           </div>
           <div className="carousel__cell" key={3}>
-          <div className="column">
+            <div className="column">
               <h6>Other</h6>
               <ul>
                 <li>
@@ -232,7 +232,14 @@ const Carousel = () => {
       </div>
 
       <div className="hint">
-        Hint: Swipe or click buttons to rotate manually
+        {/* only display swipe when screen size less than 550 */}
+
+        <div className="hint__swipe">
+          Hint: Swipe to rotate manually
+        </div>
+        <div className="hint__rotate">
+          Hint: Swipe or click buttons to rotate manually
+        </div>
       </div>
 
     </div>
