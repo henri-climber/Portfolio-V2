@@ -1,6 +1,7 @@
 import Home from './components/Home'
 import SocialIcons from './components/SocialIcons'
 import Skills from './components/Skills'
+import Carousel from './components/Skills/skills2'
 import Projects from './components/Projects'
 import './App.scss'
 import AboutMe from './components/AboutMe'
@@ -15,7 +16,7 @@ function App() {
         <Navbar />
         <SocialIcons />
         <Home />
-        <Skills />
+        <Carousel />
         <Projects/>
         <AboutMe/>
         <Contact/>
