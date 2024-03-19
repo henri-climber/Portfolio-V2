@@ -92,7 +92,7 @@ const Navbar = () => {
           <li >
             <Link
               to="skills"
-              offset={-150}
+              offset={+150}
               spy={true}
               smooth={true}
               duration={500}
@@ -105,7 +105,7 @@ const Navbar = () => {
           <li>
             <Link
               to="projects"
-              offset={-150}
+              offset={+150}
               spy={true}
               smooth={true}
               duration={500}
@@ -118,7 +118,7 @@ const Navbar = () => {
           <li>
             <Link
               to="aboutme"
-              offset={-150}
+              offset={+150}
               spy={true}
               smooth={true}
               duration={500}
@@ -131,7 +131,7 @@ const Navbar = () => {
           <li>
             <Link
               to="contact"
-              offset={-145}
+              offset={+150}
               spy={true}
               smooth={true}
               duration={500}
@@ -158,7 +158,7 @@ const Navbar = () => {
           <li>
             <Link
               to="home"
-              offset={-150}
+              offset={0}
               spy={true}
               smooth={true}
               duration={500}
@@ -171,7 +171,7 @@ const Navbar = () => {
           <li >
             <Link
               to="skills"
-              offset={-150}
+              offset={0}
               spy={true}
               smooth={true}
               duration={500}
@@ -184,7 +184,7 @@ const Navbar = () => {
           <li>
             <Link
               to="projects"
-              offset={-150}
+              offset={0}
               spy={true}
               smooth={true}
               duration={500}
@@ -197,7 +197,7 @@ const Navbar = () => {
           <li>
             <Link
               to="aboutme"
-              offset={-150}
+              offset={0}
               spy={true}
               smooth={true}
               duration={500}
@@ -210,7 +210,7 @@ const Navbar = () => {
           <li>
             <Link
               to="contact"
-              offset={-145}
+              offset={0}
               spy={true}
               smooth={true}
               duration={500}

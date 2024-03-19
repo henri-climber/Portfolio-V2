@@ -24,8 +24,8 @@ const Projects = () => {
                         <p className="projectDescription">Together with a friend I founded a startup to facilitate the organization of climbing competitions in Germany (which is why the language is German as well). I developed a fullstack website that is responsible for the registration and automatic results calculation  for some of the biggest climbing competitions in Germany. Since the website is online for commercial use I cannot share source code.</p>
                         <div className="row">
                             <WebsiteButton websiteUrl="https://easy-comp.net" icon={globeIcon} />
-                            <a href="https://play.google.com/store/apps/details?id=net.easy_comp.easycomp" target="_blank" style={{ display: 'inline-block', padding: '0', margin: '0', lineHeight: '1' }}>
-                                <i className="fab fa-google-play"></i>
+                            <a href="https://play.google.com/store/apps/details?id=net.easy_comp.easycomp" target="_blank" style={{ display: 'inline-block', padding: '8px', margin: '0', lineHeight: '1' }}>
+                                <i className="fab fa-google-play" ></i>
                             </a>
                         </div>
                         <h6>Technologies used:</h6>

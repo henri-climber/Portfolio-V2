@@ -119,6 +119,7 @@
   .navbar{
     display: none;
   }
+  
   .m-nav{
     z-index: 999;
     .container {
@@ -174,7 +175,7 @@
 
   .menu-items ul li .dot span {
     transform: translateX(0);
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 2;
     opacity: 1;
