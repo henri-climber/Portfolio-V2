@@ -8,16 +8,15 @@
   padding-bottom: 256px;
   justify-content: center;
 
-  @media screen and (max-width: 450px) {
-    padding-top: 128px;
-    padding-bottom: 128px;
-    max-width: 360px;
-}
-
   .row {
     display: flex;
     align-items: start;
     margin-top: 48px;
+
+    // if larger than 1420 set width to 60%
+    @media screen and (min-width: 1421px) {
+      width: 60%;
+    }
 
     @media screen and (max-width: 1420px) {
       flex-direction: column;
@@ -40,7 +39,7 @@
       padding-right: 10%;
       padding-left: 10%;
       padding-bottom: 64px;
-      width: 80%;
+      width: 90%;
       max-width: 1000px;
     }
     
@@ -53,9 +52,13 @@
         color: $text-color;
         padding-left: 8px;
         text-decoration: underline;
-        @media screen and (max-width: 450px) {
+        text-align: left;
+        @media screen and (max-width: 460px) {
           font-size: 18px; 
       }
+      @media screen and (max-width: 415px) {
+        font-size: 16px; 
+    }
       }
       
       button {
@@ -65,9 +68,28 @@
         background-color: transparent;
         border: none;
         text-decoration: underline;
-        @media screen and (max-width: 450px) {
+        text-align: left;
+        @media screen and (max-width: 460px) {
           font-size: 18px; 
       }
+      @media screen and (max-width: 415px) {
+        font-size: 16px; 
+    }
+
+      }
+
+      .linkedinIcon {
+        @media screen and (min-width: 1421px) {
+        width: 48px;
+        height: 48px;
+        margin-right: 6px;}
+        flex-shrink: 0;
+      }
+      .mailIcon {
+        @media screen and (min-width: 1421px) {
+        width: 48px;
+        height: 48px;
+        margin-left: -4px;}
       }
     }
   }
@@ -77,8 +99,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    padding-right: 120px;
-    width: 460px;
+    width: 100%;
 
     @media screen and (max-width: 1420px) {
       align-items: start;
@@ -86,11 +107,12 @@
       padding-right: 10%;
       padding-left: 10%;
       padding-bottom: 64px;
-      width: 80%;
+      width: 90%;
     }
 
     form {
       display: block;
+      width: 100%;
       
 
       @media screen and (max-width: 1420px) {
@@ -114,16 +136,10 @@
           margin: 0;
           padding: 2em 10px 10px 10px;
           font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
+width: 100%;
           border: 1px solid $white50;
           border-radius: 8px;
             
-          @media screen and (max-width: 1420px) {
-            width: 60%; 
-          }
-          @media screen and (max-width: 700px) {
-            width: 300px;
-          }
             &:focus{
               outline: none !important;
               border-radius: 8px;
@@ -149,12 +165,7 @@
           border: 1px solid $white50;
           border-radius: 8px;
             
-          @media screen and (max-width: 1420px) {
-            width: 60%;
-          }
-          @media screen and (max-width: 700px) {
-            width: 300px;
-          }
+          width: 100%;
           &:focus{
             outline: none !important;
             border-radius: 8px;

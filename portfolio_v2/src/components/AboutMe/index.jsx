@@ -6,7 +6,7 @@ import { FiDownload } from 'react-icons/fi';
 
 const AboutMe = () => {
   const handleButtonClick = () => {
-    window.open("https://drive.google.com/file/d/1pN7T-wipjOHnEZb3J-bFqPs5DhImdoiG/view?usp=sharing", '_blank');
+    window.open("https://drive.google.com/file/d/1sD9yl1oM3wSSY5IhbbNPqThP8UnCDdPB/view?usp=sharing", '_blank');
   };
 
   return (
@@ -19,18 +19,18 @@ const AboutMe = () => {
             <img className="img1" src={henriImg} alt="Henri" />
           </div>
           <p>
-          Hey there, I'm Henri, a tech enthusiast from Germany. Over the past 3.5 years, I've gone from creating 2D games to tackling data science projects and launching my own startup. My expertise lies in Flutter, Firebase, and Python, and I love embracing new technologies. Recently, I graduated high school with a perfect grade average of 1.0. 
-          </p>
+          Hey there, I'm Henri, a tech enthusiast from  Germany. I've been coding for four years and just started studying Physics at TUM in Munich. 
+          I started by creating little 2D games with Pygame and am now working on data science projects and my startup. 
+          Last year, I participated in two big Hackathons, Junctions and START Hack,  which were both fantastic. 
+          I can't wait to compete at more Hackathons in the future.</p>
           <img className="img11" src={henriImg} alt="Henri" />
         </div>
         <div className="about-me">
           <img className="img2" src={henriClimbImg} alt="Henri" />
           <p>
-            Aside from programming and my academic life, I love climbing, especially as
-            a competitive sport. I have been competing at national level for 7 years and
-            at international level two years ago. Through competitive sports, I have
-            learned many skills that are now a great help to me in school and everyday
-            life.
+          Beyond programming and academics, I'm passionate about climbing, especially as a competitive sport. I've competed at the 
+          national level for nine years and internationally. Competitive climbing has taught me resilience, strategy, and 
+          focus—skills that have been helpful both in my studies and my everyday life.
           </p>
         </div>
         <button className="btn" onClick={handleButtonClick}>

@@ -21,7 +21,7 @@ const Projects = () => {
                     </div>
                     <div className="textBox">
                         <h5>EasyComp</h5>
-                        <p className="projectDescription">Together with a friend I founded a startup to facilitate the organization of climbing competitions in Germany (which is why the language is German as well). I developed a fullstack website that is responsible for the registration and automatic results calculation  for some of the biggest climbing competitions in Germany. Since the website is online for commercial use I cannot share source code.</p>
+                        <p className="projectDescription">Together with a friend I founded a startup to facilitate the organization of climbing competitions in Germany (which is why the language is German as well). I developed a fullstack website and Android App that is responsible for the registration and automatic results calculation  for some of the biggest climbing competitions in Germany. Since the website is online for commercial use I cannot share source code.</p>
                         <div className="row">
                             <WebsiteButton websiteUrl="https://easy-comp.net" icon={globeIcon} />
                             <a href="https://play.google.com/store/apps/details?id=net.easy_comp.easycomp" target="_blank" style={{ display: 'inline-block', padding: '8px', margin: '0', lineHeight: '1' }}>

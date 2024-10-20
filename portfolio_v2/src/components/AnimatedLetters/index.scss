@@ -9,11 +9,22 @@
 
   h2{
     @media screen and (min-width: 850px) {
-      font-size: 84px;
+      font-size: 74px;
     }
     @media screen and (max-width: 850px) {
-      font-size: 60px;
+      font-size: 54px;
     }
+    @media screen and (max-width: 600px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 455px) {
+      font-size: 31px;
+    }
+
+    @media screen and (max-width: 375px){
+      font-size: 28px;
+    }
+
   }
 }
 

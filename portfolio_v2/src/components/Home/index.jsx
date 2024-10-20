@@ -8,9 +8,12 @@ import { Link} from 'react-scroll';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = ["S", "o", "f", "t", "w", "a", "r", "e"," ", "D", "e", "v", "e", "l", "o", "p", "e", "r"]
-  const nameArray2 = ["S", "o", "f", "t", "w", "a", "r", "e"]
-  const nameArray3 = ["D", "e", "v", "e", "l", "o", "p", "e", "r"]
+
+// create the arrays for "Physics Student"
+const nameArray = ["P", "h", "y", "s", "i", "c", "s", " ", "S", "t", "u", "d", "e", "n", "t", " ","&"]
+const nameArray2 = ["S", "e", "l", "f", "-", "t", "a", "u", "g", "h", "t", " ", "D", "e", "v", "e", "l", "o", "p", "e", "r"] 
+const nameArray3 = ["S", "e", "l", "f", "-", "t", "a", "u", "g", "h", "t"," ", "D", "e", "v", "e", "l", "o", "p", "e", "r"]
+const nameArray4 = ["D", "e", "v", "e", "l", "o", "p", "e", "r"]
   useEffect(() => {
       setTimeout(() => {
        return setLetterClass('text-animate-hover')
@@ -34,12 +37,17 @@ const Home = () => {
               strArray={nameArray}
               idx={5}
             />
+          <AnimatedLetters
+              letterClass={letterClass}
+              strArray={nameArray2}
+              idx={5}
+            />
         </div>
 
         <div className="animated-letters2">
         <AnimatedLetters 
               letterClass={letterClass}
-              strArray={nameArray2}
+              strArray={nameArray}
               idx={5}
             />
           <AnimatedLetters
@@ -47,12 +55,15 @@ const Home = () => {
               strArray={nameArray3}
               idx={5}
             />
+
         </div>
 
       <p>
-      Highly motivated self-taught software developer from Germany.
+      I'm a passionate Physics student and self taught developer at TUM in Munich.
         <br />
-        Currently, I'm actively seeking internships to channel my coding skills into real-world impact.
+        I'am always eager to take on diverse technical projects and learn new skills.
+        <br />
+        Feel free to explore my projects and reach out!
       </p>
       <Link className="button" 
             to='projects' 
